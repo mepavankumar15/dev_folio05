@@ -1,0 +1,149 @@
+/* Navbar.css */
+:root {
+  --navbar-bg: rgba(255, 255, 255, 0.9);
+  --navbar-text: #333333;
+  --navbar-hover: #3498db;
+  --navbar-active: #2980b9;
+  --navbar-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  --navbar-backdrop: blur(8px);
+  --icon-color: #555555;
+  --icon-hover: #3498db;
+  --social-bg-hover: rgba(0, 0, 0, 0.05);
+  --divider-color: rgba(0, 0, 0, 0.1);
+}
+
+:root.dark {
+  --navbar-bg: rgba(30, 30, 30, 0.9);
+  --navbar-text: #f5f5f5;
+  --navbar-hover: #64b5f6;
+  --navbar-active: #4dabf5;
+  --navbar-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  --icon-color: #bbbbbb;
+  --icon-hover: #64b5f6;
+  --social-bg-hover: rgba(255, 255, 255, 0.05);
+  --divider-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--navbar-bg);
+  backdrop-filter: var(--navbar-backdrop);
+  -webkit-backdrop-filter: var(--navbar-backdrop);
+  border-radius: 50px;
+  padding: 0 15px;
+  box-shadow: var(--navbar-shadow);
+  z-index: 1000;
+  width: auto;
+  max-width: fit-content;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--divider-color);
+}
+
+.navbar.scrolled {
+  top: 10px;
+  padding: 0 10px;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  gap: 10px;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 5px;
+}
+
+.navbar-links li {
+  position: relative;
+}
+
+.navbar-links button {
+  background: transparent;
+  border: none;
+  color: var(--navbar-text);
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-links button:hover {
+  color: var(--navbar-hover);
+  background: var(--social-bg-hover);
+}
+
+.navbar-links .active {
+  color: var(--navbar-active);
+  font-weight: 600;
+}
+
+.nav-icon {
+  font-size: 1.1rem;
+  color: var(--icon-color);
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 5px;
+  padding-left: 10px;
+  border-left: 1px solid var(--divider-color);
+}
+
+.social-icon {
+  color: var(--icon-color);
+  font-size: 2.4rem; /* Increased from 1.2rem */
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Specific icon sizes */
+.social-icon[aria-label="GitHub"],
+.social-icon[aria-label="Twitter"] {
+  font-size: 1.5rem; /* Even larger for GitHub and Twitter */
+}
+
+.theme-toggle {
+  font-size: 1.1rem;
+  color: var(--icon-color);
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.social-icon:hover, 
+.theme-toggle:hover {
+  color: var(--icon-hover);
+  background: var(--social-bg-hover);
+  transform: scale(1.1);
+}
