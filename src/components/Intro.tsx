@@ -9,6 +9,15 @@ const Intro = () => {
     <section id="intro" className="section intro-section">
       <div className="container">
         <div className="intro-content">
+          {/* Profile picture container */}
+          <div className="profile-pic-container">
+            <img 
+              src="/pavan-pic.jpg" 
+              alt="Pavan Kumar K" 
+              className="profile-pic"
+            />
+          </div>
+          
           <h1>Hello, I'm <span className="highlight">Pavan Kumar K</span></h1>
           <p className="subtitle">Web Developer</p>
           <p className="intro-text">
