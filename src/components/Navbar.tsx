@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
-import { FiGithub, FiTwitter, FiUser, FiSun, FiMoon } from 'react-icons/fi'
+import { FiGithub, FiTwitter, FiUser, FiSun, FiMoon, FiMenu, FiX } from 'react-icons/fi'
 import './Navbar.css'
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('intro')
   const [darkMode, setDarkMode] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const savedMode = localStorage.getItem('darkMode')
@@ -35,66 +36,119 @@ const Navbar = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
     }
+    setIsMobileMenuOpen(false)
   }
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
+  // Close mobile menu when window resizes to desktop size
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsMobileMenuOpen(false)
+      }
+    }
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="navbar-container">
-        <ul className="navbar-links">
-          <li>
+    <>
+      <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+        <div className="navbar-container">
+          <button 
+            className="mobile-menu-button md:hidden"
+            onClick={toggleMobileMenu}
+            aria-label="Menu"
+          >
+            {isMobileMenuOpen ? <FiX /> : <FiMenu />}
+          </button>
+          
+          <ul className="navbar-links">
+            <li>
+              <button 
+                onClick={() => scrollToSection('intro')}
+                className={activeSection === 'intro' ? 'active' : ''}
+              >
+                <FiUser className="nav-icon" />
+                <span>About</span>
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => scrollToSection('projects')}
+                className={activeSection === 'projects' ? 'active' : ''}
+              >
+                Projects
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => scrollToSection('blogs')}
+                className={activeSection === 'blogs' ? 'active' : ''}
+              >
+                Blogs
+              </button>
+            </li>
+          </ul>
+          
+          <div className="social-icons">
+            <a 
+              href="https://github.com/mepavankumar15" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <FiGithub className="social-icon" />
+            </a>
+            <a 
+              href="https://twitter.com/mrpavankumar005" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+            >
+              <FiTwitter className="social-icon" />
+            </a>
+            <button 
+              onClick={toggleTheme} 
+              className="theme-toggle"
+              aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              {darkMode ? <FiSun /> : <FiMoon />}
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile menu overlay */}
+      {isMobileMenuOpen && (
+        <div className="mobile-menu md:hidden">
+          <div className="mobile-menu-content">
             <button 
               onClick={() => scrollToSection('intro')}
-              className={activeSection === 'intro' ? 'active' : ''}
+              className={`mobile-menu-link ${activeSection === 'intro' ? 'active' : ''}`}
             >
               <FiUser className="nav-icon" />
               <span>About</span>
             </button>
-          </li>
-          <li>
             <button 
               onClick={() => scrollToSection('projects')}
-              className={activeSection === 'projects' ? 'active' : ''}
+              className={`mobile-menu-link ${activeSection === 'projects' ? 'active' : ''}`}
             >
               Projects
             </button>
-          </li>
-          <li>
             <button 
               onClick={() => scrollToSection('blogs')}
-              className={activeSection === 'blogs' ? 'active' : ''}
+              className={`mobile-menu-link ${activeSection === 'blogs' ? 'active' : ''}`}
             >
               Blogs
             </button>
-          </li>
-        </ul>
-        
-        <div className="social-icons">
-          <a 
-            href="https://github.com/mepavankumar15" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-          >
-            <FiGithub className="social-icon" />
-          </a>
-          <a 
-            href="https://twitter.com/mrpavankumar005" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            aria-label="Twitter"
-          >
-            <FiTwitter className="social-icon" />
-          </a>
-          <button 
-            onClick={toggleTheme} 
-            className="theme-toggle"
-            aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
-          >
-            {darkMode ? <FiSun /> : <FiMoon />}
-          </button>
+          </div>
         </div>
-      </div>
-    </nav>
+      )}
+    </>
   )
 }
 

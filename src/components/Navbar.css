@@ -147,3 +147,154 @@
   background: var(--social-bg-hover);
   transform: scale(1.1);
 }
+/* Add these to your existing Navbar.css */
+
+/* Mobile menu button */
+.md\\:hidden {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .md\\:hidden {
+    display: block;
+  }
+  
+  .navbar {
+    width: 95%;
+    max-width: none;
+    justify-content: space-between;
+  }
+  
+  .navbar-links {
+    display: none;
+  }
+  
+  .social-icons {
+    margin-left: auto;
+  }
+  
+  /* Adjust navbar height on mobile */
+  .navbar-container {
+    height: 60px;
+  }
+}
+
+/* Dark mode adjustments for mobile menu */
+.dark .mobile-menu {
+  background-color: rgba(30, 30, 30, 0.98);
+}
+
+/* Transition for mobile menu */
+.mobile-menu {
+  transition: all 0.3s ease;
+}
+/* Add to existing Navbar.css */
+
+/* Mobile menu button */
+.mobile-menu-button {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--navbar-text);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-button:hover {
+  background: var(--social-bg-hover);
+}
+
+/* Mobile menu overlay */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-menu-content {
+  background: var(--navbar-bg);
+  backdrop-filter: var(--navbar-backdrop);
+  -webkit-backdrop-filter: var(--navbar-backdrop);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: var(--navbar-shadow);
+  width: 80%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mobile-menu-link {
+  background: transparent;
+  border: none;
+  color: var(--navbar-text);
+  padding: 12px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile-menu-link:hover {
+  color: var(--navbar-hover);
+  background: var(--social-bg-hover);
+}
+
+.mobile-menu-link.active {
+  color: var(--navbar-active);
+  font-weight: 600;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  .mobile-menu-button {
+    display: block;
+  }
+  
+  .navbar {
+    width: 95%;
+    max-width: none;
+    justify-content: space-between;
+  }
+  
+  .navbar-links {
+    display: none;
+  }
+  
+  .social-icons {
+    margin-left: auto;
+    border-left: none;
+  }
+  
+  /* Adjust navbar height on mobile */
+  .navbar-container {
+    height: 60px;
+    gap: 5px;
+  }
+}
+
+/* Dark mode adjustments for mobile menu */
+.dark .mobile-menu {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dark .mobile-menu-content {
+  border: 1px solid var(--divider-color);
+}
