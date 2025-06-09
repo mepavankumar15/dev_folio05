@@ -534,3 +534,33 @@ main {
     grid-template-columns: 1fr;
   }
 }
+/* Add to existing App.css */
+
+/* Skill icons */
+.skill-icons {
+  display: flex;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.skill-icon {
+  font-size: 1.4rem;
+  color: var(--text-light);
+  transition: var(--transition);
+}
+
+.skill-category li:hover .skill-icon {
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skill-icons {
+    gap: 6px;
+  }
+  
+  .skill-icon {
+    font-size: 1.2rem;
+  }
+}
