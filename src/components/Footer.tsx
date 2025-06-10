@@ -28,7 +28,7 @@ const Footer = () => {
                 <a href="https://twitter.com/mrpavankumar005" target="_blank" rel="noopener noreferrer">
                   Twitter
                 </a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/pavan-kumar-kuchibhotla-3a34a8258/" target="_blank" rel="noopener noreferrer">
                   LinkedIn
                 </a>
               </div>
