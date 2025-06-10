@@ -25,14 +25,17 @@ const Intro = () => {
             Currently enhancing my skills in distributed systems and blockchain technologies.
           </p>
           
-          <div className="cta-buttons">
-            <button 
-              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+          <div className="cta-buttons"> 
+              <a
+              href="https://drive.google.com/file/d/1Aso_P1RxcT8EkbFW9X6M9PJSLuMp45Ng/view?usp=drive_link" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary"
             >
-              View Projects
-            </button>
-            <button 
+              View Resume
+            </a>
+
+            <button
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="btn-secondary"
             >
