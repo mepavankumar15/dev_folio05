@@ -70,6 +70,7 @@ const Intro = () => {
               <SiMongodb className="skill-icon" title="Mongodb" />
               <SiMysql className="skill-icon" title="MySQL" />
               <SiTailwindcss className="skill-icon" title="tailwindcss" />
+              <SiPostgresql className='skill-icon' title='postgresql' />
             </div>
           </div>
         </div>
