@@ -77,18 +77,18 @@ const Navbar = () => {
             </li>
             <li>
               <button 
-                onClick={() => scrollToSection('education')}
-                className={activeSection === 'education' ? 'active' : ''}
-              >
-                Education
-              </button>
-            </li>
-            <li>
-              <button 
                 onClick={() => scrollToSection('projects')}
                 className={activeSection === 'projects' ? 'active' : ''}
               >
                 Projects
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => scrollToSection('education')}
+                className={activeSection === 'education' ? 'active' : ''}
+              >
+                Education
               </button>
             </li>
             <li>

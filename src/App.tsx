@@ -1,4 +1,4 @@
-import Navbar from './components/Navbar';
+import Navbar from './components/navbar';
 import Intro from './components/Intro';
 import Projects from './components/Projects';
 import Blogs from './components/Blogs';
@@ -13,8 +13,8 @@ function App() {
       <Navbar />
       <main>
         <Intro />
-        <Education />
         <Projects />
+        <Education />
         <Blogs />
         <Hobbies />
       </main>
