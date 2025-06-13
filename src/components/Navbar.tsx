@@ -43,7 +43,6 @@ const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
 
-  // Close mobile menu when window resizes to desktop size
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
@@ -78,6 +77,14 @@ const Navbar = () => {
             </li>
             <li>
               <button 
+                onClick={() => scrollToSection('education')}
+                className={activeSection === 'education' ? 'active' : ''}
+              >
+                Education
+              </button>
+            </li>
+            <li>
+              <button 
                 onClick={() => scrollToSection('projects')}
                 className={activeSection === 'projects' ? 'active' : ''}
               >
@@ -90,6 +97,14 @@ const Navbar = () => {
                 className={activeSection === 'blogs' ? 'active' : ''}
               >
                 Blogs
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => scrollToSection('hobbies')}
+                className={activeSection === 'hobbies' ? 'active' : ''}
+              >
+                Hobbies
               </button>
             </li>
           </ul>
@@ -134,6 +149,12 @@ const Navbar = () => {
               <span>About</span>
             </button>
             <button 
+              onClick={() => scrollToSection('education')}
+              className={`mobile-menu-link ${activeSection === 'education' ? 'active' : ''}`}
+            >
+              Education
+            </button>
+            <button 
               onClick={() => scrollToSection('projects')}
               className={`mobile-menu-link ${activeSection === 'projects' ? 'active' : ''}`}
             >
@@ -144,6 +165,12 @@ const Navbar = () => {
               className={`mobile-menu-link ${activeSection === 'blogs' ? 'active' : ''}`}
             >
               Blogs
+            </button>
+            <button 
+              onClick={() => scrollToSection('hobbies')}
+              className={`mobile-menu-link ${activeSection === 'hobbies' ? 'active' : ''}`}
+            >
+              Hobbies
             </button>
           </div>
         </div>

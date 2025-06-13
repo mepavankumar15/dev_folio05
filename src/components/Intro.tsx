@@ -1,7 +1,8 @@
 import { 
   SiTypescript, SiJavascript, SiGo, SiRust, SiPython,
   SiReact, SiNextdotjs, SiNodedotjs, SiTensorflow,
-  SiDocker, SiRedis, SiBlockchaindotcom, SiEthereum
+  SiDocker, SiRedis, SiBlockchaindotcom, SiEthereum , SiMongodb, 
+  SiMysql , SiPostgresql , SiTailwindcss
 } from 'react-icons/si';
 
 const Intro = () => {
@@ -26,7 +27,7 @@ const Intro = () => {
           </p>
           
           <div className="cta-buttons"> 
-              <a
+            <a
               href="https://drive.google.com/file/d/1uJcYVIpcMFCqP7Ms7BMdhrHzPnpJb6il/view?usp=drive_link" 
               target="_blank"
               rel="noopener noreferrer"
@@ -46,89 +47,29 @@ const Intro = () => {
 
         <div className="skills-section">
           <h3>Technical Skills</h3>
-          <div className="skills-grid">
-            <div className="skill-category">
-              <h4>Languages</h4>
-              <ul>
-                <li>
-                  TypeScript/JavaScript
-                  <div className="skill-icons">
-                    <SiTypescript className="skill-icon" />
-                    <SiJavascript className="skill-icon" />
-                  </div>
-                </li>
-                <li>
-                  Golang
-                  <div className="skill-icons">
-                    <SiGo className="skill-icon" />
-                  </div>
-                </li>
-                <li>
-                  Rust
-                  <div className="skill-icons">
-                    <SiRust className="skill-icon" />
-                  </div>
-                </li>
-                <li>
-                  Python
-                  <div className="skill-icons">
-                    <SiPython className="skill-icon" />
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div className="skill-category">
-              <h4>Frameworks</h4>
-              <ul>
-                <li>
-                  React/Next.js
-                  <div className="skill-icons">
-                    <SiReact className="skill-icon" />
-                    <SiNextdotjs className="skill-icon" />
-                  </div>
-                </li>
-                <li>
-                  Node.js
-                  <div className="skill-icons">
-                    <SiNodedotjs className="skill-icon" />
-                  </div>
-                </li>
-                <li>
-                  TensorFlow
-                  <div className="skill-icons">
-                    <SiTensorflow className="skill-icon" />
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div className="skill-category">
-              <h4>Technologies</h4>
-              <ul>
-                <li>
-                  Docker
-                  <div className="skill-icons">
-                    <SiDocker className="skill-icon" />
-                  </div>
-                </li>
-                <li>
-                  Redis
-                  <div className="skill-icons">
-                    <SiRedis className="skill-icon" />
-                  </div>
-                </li>
-                <li>
-                  Blockchain
-                  <div className="skill-icons">
-                    <SiBlockchaindotcom className="skill-icon" />
-                  </div>
-                </li>
-                <li>
-                  Web3
-                  <div className="skill-icons">
-                    <SiEthereum className="skill-icon" />
-                  </div>
-                </li>
-              </ul>
+          <div className="skills-scroll-container">
+            <div className="skills-scroll">
+              {/* Languages */}
+              <SiTypescript className="skill-icon" title="TypeScript" />
+              <SiJavascript className="skill-icon" title="JavaScript" />
+              <SiGo className="skill-icon" title="Golang" />
+              <SiRust className="skill-icon" title="Rust" />
+              <SiPython className="skill-icon" title="Python" />
+              
+              {/* Frameworks */}
+              <SiReact className="skill-icon" title="React" />
+              <SiNextdotjs className="skill-icon" title="Next.js" />
+              <SiNodedotjs className="skill-icon" title="Node.js" />
+              <SiTensorflow className="skill-icon" title="TensorFlow" />
+              
+              {/* Technologies */}
+              <SiDocker className="skill-icon" title="Docker" />
+              <SiRedis className="skill-icon" title="Redis" />
+              <SiBlockchaindotcom className="skill-icon" title="Blockchain" />
+              <SiEthereum className="skill-icon" title="Ethereum" />
+              <SiMongodb className="skill-icon" title="Mongodb" />
+              <SiMysql className="skill-icon" title="MySQL" />
+              <SiTailwindcss className="skill-icon" title="tailwindcss" />
             </div>
           </div>
         </div>

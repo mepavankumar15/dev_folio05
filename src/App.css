@@ -600,3 +600,179 @@ main {
     height: 130px;
   }
 }
+/* Skills Scroll Section */
+.skills-scroll-container {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 30px;
+  position: relative;
+}
+
+.skills-scroll-container::before,
+.skills-scroll-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+}
+
+.skills-scroll-container::before {
+  left: 0;
+  background: linear-gradient(to right, var(--background), transparent);
+}
+
+.skills-scroll-container::after {
+  right: 0;
+  background: linear-gradient(to left, var(--background), transparent);
+}
+
+.skills-scroll {
+  display: flex;
+  gap: 30px;
+  padding: 20px 0;
+  animation: scroll 30s linear infinite;
+  width: max-content;
+}
+
+.skills-scroll:hover {
+  animation-play-state: paused;
+}
+
+.skill-icon {
+  font-size: 3rem;
+  color: var(--text-light);
+  transition: var(--transition);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 10px;
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+}
+
+.skill-icon:hover {
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skills-scroll {
+    gap: 20px;
+    animation-duration: 20s;
+  }
+  
+  .skill-icon {
+    font-size: 2.5rem;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-scroll {
+    gap: 15px;
+    animation-duration: 10s;
+  }
+  
+  .skill-icon {
+    font-size: 2rem;
+    padding: 10px;
+  }
+}
+/* Skills Grid Scroll Section */
+.skills-section {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.skills-scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 30px auto;
+  padding: 20px 0;
+  cursor: pointer;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+
+.skills-scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.skills-scroll {
+  display: inline-flex;
+  gap: 30px;
+  padding: 0 50px;
+}
+
+.skill-icon {
+  font-size: 3rem;
+  color: var(--text-light);
+  transition: var(--transition);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 10px;
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  width: 80px;
+  height: 80px;
+}
+
+.skill-icon:hover {
+  color: var(--primary-color);
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-hint {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-top: 10px;
+  opacity: 0.7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skills-scroll {
+    gap: 20px;
+    padding: 0 30px;
+  }
+  
+  .skill-icon {
+    font-size: 2.5rem;
+    width: 70px;
+    height: 70px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-scroll {
+    gap: 15px;
+    padding: 0 20px;
+  }
+  
+  .skill-icon {
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+  }
+}
