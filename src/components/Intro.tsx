@@ -20,7 +20,7 @@ const Intro = () => {
           </div>
           
           <h1>Hello, I'm <span className="highlight">Pavan Kumar K</span></h1>
-          <p className="subtitle">Web Developer</p>
+          <p className="subtitle">Python/JS Developer</p>
           <p className="intro-text">
             I build innovative solutions with expertise in Web3, AI/ML, and backend development.
             Currently enhancing my skills in distributed systems and blockchain technologies.
@@ -28,7 +28,7 @@ const Intro = () => {
           
           <div className="cta-buttons"> 
             <a
-              href="https://drive.google.com/file/d/1uJcYVIpcMFCqP7Ms7BMdhrHzPnpJb6il/view?usp=drive_link" 
+              href="https://drive.google.com/file/d/1ceua-2EiTTJ2uhWwQMaCMwoim5czeWlL/view?usp=drive_link" 
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
