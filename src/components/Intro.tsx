@@ -2,7 +2,7 @@ import {
   SiTypescript, SiJavascript, SiGo, SiRust, SiPython,
   SiReact, SiNextdotjs, SiNodedotjs, SiTensorflow,
   SiDocker, SiRedis, SiBlockchaindotcom, SiEthereum , SiMongodb, 
-  SiMysql , SiPostgresql , SiTailwindcss
+  SiMysql , SiPostgresql , SiTailwindcss , SiAnchor
 } from 'react-icons/si';
 
 const Intro = () => {
@@ -20,7 +20,7 @@ const Intro = () => {
           </div>
           
           <h1>Hello, I'm <span className="highlight">Pavan Kumar K</span></h1>
-          <p className="subtitle">Python/JS Developer</p>
+          <p className="subtitle"> Web3|AI Developer</p>
           <p className="intro-text">
             I build innovative solutions with expertise in Web3, AI/ML, and backend development.
             Currently enhancing my skills in distributed systems and blockchain technologies.
@@ -61,6 +61,7 @@ const Intro = () => {
               <SiNextdotjs className="skill-icon" title="Next.js" />
               <SiNodedotjs className="skill-icon" title="Node.js" />
               <SiTensorflow className="skill-icon" title="TensorFlow" />
+              <SiAnchor className="skill-icon" title="Anchor" />
               
               {/* Technologies */}
               <SiDocker className="skill-icon" title="Docker" />
