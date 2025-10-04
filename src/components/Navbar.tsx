@@ -119,7 +119,7 @@ const Navbar = () => {
               <FiGithub className="social-icon" />
             </a>
             <a 
-              href="https://twitter.com/mrpavankumar005" 
+              href="https://twitter.com/pavan15dotai" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="Twitter"
