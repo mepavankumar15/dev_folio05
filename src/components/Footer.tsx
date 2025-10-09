@@ -25,6 +25,7 @@ const Footer = () => {
                 <a href="https://www.linkedin.com/in/pavan-kumar-kuchibhotla-3a34a8258/" target="_blank" rel="noopener noreferrer">
                   LinkedIn
                 </a>
+                </div>
               </div>
             </div>
       
