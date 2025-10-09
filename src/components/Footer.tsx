@@ -29,6 +29,8 @@ const Footer = () => {
               </div>
             </div>
             </div>
+        </section>
+    
       
       <footer className="footer">
         <div className="container">
