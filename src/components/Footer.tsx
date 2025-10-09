@@ -14,7 +14,7 @@ const Footer = () => {
               <ul>
                 <li>
                   <span>Email:</span> 
-                  <a href="mailto:pavan@example.com">mepavankumar15@gmail.com</a>
+                  <a href="mailto:mepavankumar15@gmail.com">mepavankumar15@gmail.com</a>
                 </li>
                 <li>
                   <span>Location:</span> Hyderabad, India
@@ -22,33 +22,11 @@ const Footer = () => {
               </ul>
               
               <div className="social-links">
-                <a href="https://github.com/mepavankumar15" target="_blank" rel="noopener noreferrer">
-                  GitHub
-                </a>
-                <a href="https://twitter.com/mrpavankumar005" target="_blank" rel="noopener noreferrer">
-                  Twitter
-                </a>
                 <a href="https://www.linkedin.com/in/pavan-kumar-kuchibhotla-3a34a8258/" target="_blank" rel="noopener noreferrer">
                   LinkedIn
                 </a>
               </div>
             </div>
-            
-            <form className="contact-form">
-              <div className="form-group">
-                <input type="text" placeholder="Your Name" required />
-              </div>
-              <div className="form-group">
-                <input type="email" placeholder="Your Email" required />
-              </div>
-              <div className="form-group">
-                <textarea placeholder="Your Message" rows={5} required></textarea>
-              </div>
-              <button type="submit" className="btn-primary">Send Message</button>
-            </form>
-          </div>
-        </div>
-      </section>
       
       <footer className="footer">
         <div className="container">
