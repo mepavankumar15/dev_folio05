@@ -20,7 +20,6 @@ const Intro = () => {
           </div>
           
           <h1>Hello, I'm <span className="highlight">Pavan Kumar K</span></h1>
-          <p className="subtitle">(avyu)</p>
           <p className="subtitle"> Web3 | AI Developer</p>
           <p className="intro-text">
             I build innovative solutions with expertise in Web3, AI/ML, and web development.
