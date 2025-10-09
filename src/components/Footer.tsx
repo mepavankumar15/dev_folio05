@@ -28,6 +28,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
+            </div>
       
       <footer className="footer">
         <div className="container">
